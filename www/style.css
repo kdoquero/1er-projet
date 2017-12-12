@@ -26,11 +26,40 @@ article {
   display: inline;
 }
 
-slidebar {
+.container {
   position: relative;
-  display: inline;
+  top : 0;
+  left  0;
 }
-.logo {
+.banner {
+  position: relative;
+  top: 0;
+  bottom: 0;
+}
+.banner:after {
   position: absolute;
-  
+  top: 30px;
+  left: 70px;
+  z-index: 1;
+}
+
+}
+.bulle {
+overflow: hidden;
+-webkit-border-radius: 100px;
+-moz-border-radius: 100px;
+border-radius: 100px;
+border-style: solid;
+border-width: 3px;
+border-color: red;
+}
+
+.slidebarlink {
+
+}
+nav {
+  float: left;
+}
+.logohead {
+  float: left;
 }
