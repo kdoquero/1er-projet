@@ -1,3 +1,31 @@
-h1 {
-  color: rgba(238, 255, 0, 0.397);
+.menu__item {
+  display : inline-block;
+  height: 18px;
+  z-index: 3;
+}
+.main-menu {
+  display: inline;
+  height: 34px;
+  background-color: #1FD316;
+  z-index: -1;
+}
+
+.menu_logo {
+  display: block;
+  width: 70px;
+  height: 50px;
+  
+}
+#logo {
+  display: block;
+}
+
+header {
+  display: inline;
+  padding:40px 0;
+  top:0;
+  z-index:10;
+}
+nav, section, header {
+  display: block;
 }

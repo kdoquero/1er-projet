@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Accueil - Bas Gros Poing </title>
   <meta name="description" content="Site sur l'actu des jeux de combats">
-  <link rel="icon" href="./images/favicon-32x32.png" 
+  <link rel="icon" href="./images/favicon-32x32.png"> 
   <link href="./assets/fonts/Futura Std Light Oblique.otf" rel='stylesheet' type='text/css'>
   <link href="./assets/fonts/Futura Std Extra Bold oblique.otf" rel='stylesheet' type='text/css'>
   <link href="./assets/fonts/Futura Std Light.otf" rel='stylesheet' type='text/css'>
@@ -15,73 +15,46 @@
 </head>
 <body>
   <header>
-    <nav  class="main-menu" id="">
-      <div class="main-menu_container">
+    <nav class="main-menu">
+      <div class="main-menu__container">
         <ul>
-          <li class="menu_logo" id="logo">
-            <a href="/">
-              <img src="./images/logo-pink.svg" alt="logo">
-            </a>
+          <li class="menu__logo" id="logo" >
+            <a href="/"><img src="./images/logo-pink.svg" alt="logo"></a>
           </li>
-          <li class="menu_item">
-            <a href="http://exemple.dev/rounds">
-            <span>Rounds</span>
-            <i></i>
-            </a>
+          <li class="menu__item" >
+            <a href="#"><span>Rounds</span><i></i></a>
           </li>
-          <li class="menu_item">
-            <a href="http://exemple.dev/articles">
-            <span>Articles</span>
-            <i></i>
-            </a>
-          </li class="menu_item">
-            <a href="http://exemple.dev/Podcasts">
-            <span>Podcasts</span>
-            <i></i>
-            </a>
-            
-          <li>
-            <a href="http://exemple.dev/soutenez-bgp">
-              <span>Soutenez-bgp</span>
-              <i></i>
-            </a>
+          <li class="menu__item" >
+            <a href="#"><span>Articles</span><i></i></a>
+          </li>
+          <li class="menu__item" >
+            <a href="#"><span>Podcasts</span><i></i></a>
+          </li>
+          <li class="menu__item" >
+            <a href="#"><span>Soutenez BGP</span><i></i></a>
           </li>
         </ul>
+      </div>  
+    </nav>
+  </header> 
+  <main>
+    <section>
+      <div>
+        <h2>Round 1</h2>
       </div>
-      </nav>
-    <script>
-        var lastScrollTop = 0;
-        var mag;
-        if(document.getElementById("magazine")) 
-        {
-          window.addEventListener("scroll", function(){  
-          var st = window.pageYOffset || document.documentElement.scrollTop;  
-          if (st > lastScrollTop){
-            var header = document.getElementsByTagName("header")[0];
-            header.classList.add("header-mag");
-          } else {
-            var header = document.getElementsByTagName("header")[0];
-            header.classList.remove("header-mag");
-          }
-          lastScrollTop = st;
-       }, false);
-        }
-      
-        window.addEventListener('scroll', function(e) {
-        var s = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-        var body = document.body;
-        var html = document.documentElement;
-        var d = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-        var c = window.innerHeight;
-        var position = (s / (d - c)) * 100;
-        document.getElementById('Progress-bar').setAttribute('style', 'width: ' + position + '%');
-      });
-        
-    </script>
-    
-  </header>
-
-  <h1>hello world !</h1>
-  <img src="hello.jpg" alt="hello world !">
-</body>
-</html>
+      <div>
+        <a href="#">
+          <div class=" card_img white-bg random-bg"><span style="background-image:url('images/balrog-626x600-q30.jpg')"></span>
+          </div>
+          <div>
+            <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, placeat maxime voluptatibus eligendi sequi quibusdam soluta quasi libero dicta rem quia quaerat, fuga provident inventore ducimus veniam saepe, adipisci optio?</h2>
+              <div>
+                <i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quaerat eos facilis explicabo est atque blanditiis eius, obcaecati et cumque ea sint officiis tempore iure mollitia deserunt provident doloremque iusto?></i>
+              </div>
+              <h3>Opinion</h3>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+  
