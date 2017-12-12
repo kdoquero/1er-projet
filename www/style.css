@@ -25,3 +25,12 @@ a {
 article {
   display: inline;
 }
+
+slidebar {
+  position: relative;
+  display: inline;
+}
+.logo {
+  position: absolute;
+  
+}
