@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Play";
+  src: url(font/);
+}
+
+body {
+  font-family: "Play";
+}
 .barre-top {
   background-color: #e00000;
   height: 36px;
@@ -43,7 +51,7 @@ article {
   z-index: 1;
 }
 
-}
+
 .bulle {
 overflow: hidden;
 -webkit-border-radius: 100px;
@@ -54,6 +62,10 @@ border-width: 3px;
 border-color: red;
 }
 
+.lrow {
+  float: left;
+}
+
 .slidebarlink {
 
 }
@@ -62,4 +74,11 @@ nav {
 }
 .logohead {
   float: left;
+}
+
+.test {
+  display: block;
+}
+.image {
+  background-image: url("./images/shantaebubble.png");
 }
