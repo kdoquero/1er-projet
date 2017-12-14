@@ -9,6 +9,13 @@ body, header {
   font-style: normal;
   font-weight: normal;
 }
+.titre-arti, b {
+  color: red;
+}
+.sub-button {
+  transform: rotate(180deg);
+  size: 50%;
+}
 
 a {
   text-decoration:none;
@@ -21,7 +28,10 @@ a {
   background-color: #e00000;
   height: 36px;
 }
+
 .headerwrap {
+  display: flex;
+  align-items: flex-start;
   margin: 0px;
   background-color: #ffffff
 }
@@ -29,11 +39,11 @@ a {
 .logohead {
   display: block;
   max-width: 96%;
-  float: left;
+  
 }
 
 nav {
-float: left;
+
 }
 
 header {
@@ -194,6 +204,17 @@ width: 200px;
   outline: none;
 }
 
-.articlefond {
-  display: block;
+article {
+  display: flex;
+  flex-direction: row;
 }
+
+.articlefond {
+  padding-top: 50px;
+
+}
+
+article > div > h5 {
+  color: #575757;
+}
+
