@@ -14,7 +14,10 @@ body, header {
 }
 .sub-button {
   transform: rotate(180deg);
-  size: 50%;
+  height: 20px;
+  width: 20px;
+  margin-bottom: 0px;
+  margin-left: 5px;
 }
 
 a {
@@ -27,6 +30,7 @@ a {
 .barre-top {
   background-color: #e00000;
   height: 36px;
+  border-bottom: 1px solid #e7e7e7;
 }
 
 .headerwrap {
@@ -37,8 +41,8 @@ a {
 }
 
 .logohead {
-  display: block;
-  max-width: 96%;
+  max-height: 64px;
+  max-width: 280px;
   
 }
 
@@ -166,16 +170,9 @@ article {
   left  0;
 }
 
+section {
 
-.platform {
-  display: block;
-  height: 30px;
-  border-width: 3px;  
-  border-color: red;
-  
 }
-
-
 .bulle {
 overflow: hidden;
 -webkit-border-radius: 100px;
