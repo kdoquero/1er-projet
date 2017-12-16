@@ -11,7 +11,26 @@ body, header {
 }
 .titre-arti, b {
   color: red;
+  margin: 10px 0 0 10px;
 }
+
+ul
+{
+list-style-type: none;
+}
+
+.ico {
+  height: 25px;
+  margin: 3px 1px;
+  
+}
+
+.top-content {
+  justify-content: flex-end;
+
+}
+
+
 .sub-button {
   transform: rotate(180deg);
   height: 20px;
@@ -35,9 +54,11 @@ a {
 
 .headerwrap {
   display: flex;
-  align-items: flex-start;
+  justify-items: flex-start;
+  align-items: center;
   margin: 0px;
-  background-color: #ffffff
+  background-color: #ffffff;
+  
 }
 
 .logohead {
@@ -46,17 +67,20 @@ a {
   
 }
 
-nav {
-
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;  
+}
+.container-column {
+  display: flex;
+  flex-direction: column;
 }
 
 header {
   clear: both;
 }
-li {
-  display: inline-block;
-  
-}
+
 
 
 
@@ -64,7 +88,11 @@ li {
   display: block;
   overflow: hidden;
   height: 580px;
-  width: 1600px;
+  width: 1200px;
+}
+
+.slider-content {
+  justify-content: center;
 }
 
 .slider figure div {
@@ -82,7 +110,7 @@ float: left;
   width:  500%;
   margin: 0;
   left: 0;
-  animation: 15s slidy infinite
+  animation: 25s slidy infinite
 }
 
 @keyframes slidy {
@@ -91,65 +119,35 @@ float: left;
       left: 0;
     }
   
-    10% {
+    16% {
       left: 0;
     }
   
-    12% {
+    26% {
        left: -100%;
     }
   
-    22% {
-      left: -100%;
-    }
-  
-    24% {
-      left:-200%;
-    }
-    34% {
-      left:-200%;
-    }
-  
     36% {
-      left: -300%;
+      left: -100%;
     }
   
     46% {
-      left: -300%;
+      left:-200%;
+    }
+
+    56% {
+      left:-200%;
+    }
+
+    66% {
+      left: -300%
+    }
+
+    78% {
+      left: -300%
     }
   
-    48% {
-      left: -400%;
-    }
-  
-    58% {
-      left: -400%;
-    }
-    
-    60% {
-      left: -300%;
-    }
-
-    70% {
-      left: -300%;
-    }
-
-    72% {
-      left: -200%;
-    }
-
-    82% {
-      left: -200%;
-    }
-
-    84% {
-      left: -100%;
-    }
-
-    94% {
-      left: -100%;
-    }
-    96% {
+    100% {
       left: 0%;
     }
   }
@@ -160,18 +158,30 @@ float: left;
   margin: 0px;
   background-color: #cfd4f3
 }
-article {
-  display: inline;
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
 }
-
-.container {
-  position: relative;
-  top : 0;
-  left  0;
+section a {
+  display: block;
+  height: 25px;
+  background-color: #ffffff;
+  border: 2px solid #fc0606;
+  border-radius: 30px;
+  width: 180px;
+  text-align: center;
 }
-
-section {
-
+section a:hover {
+  display: block;
+  height: 25px;
+  background-color: #ff0000;
+  border: 2px solid #fc0606;
+  border-radius: 30px;
+  width: 180px;
+  text-align: center;
+  color: #ffffff
 }
 .bulle {
 overflow: hidden;
@@ -184,22 +194,6 @@ border-color: red;
 width: 200px;
 }
 
-.slidebarlink {
-
-}
-
-
-
-.image {
-  position: initial;
-  display: block;
-  width: 1200px;
-  height: 100px;
-  background-image: url("./images/shantaebubble.png");
-  background-repeat: no-repeat;
-  background-size: contain;;
-  outline: none;
-}
 
 article {
   display: flex;
@@ -208,10 +202,71 @@ article {
 
 .articlefond {
   padding-top: 50px;
+  min-width: 380px;
+  max-width: 400px;
 
 }
 
-article > div > h5 {
+article h5 {
   color: #575757;
+  margin: 10px 0 0 10px;
 }
 
+article h3 {
+  color: red;
+  font-size: 22px;
+  margin-left: 22px;
+}
+
+.store-items {
+justify-content: space-between; 
+}
+footer {
+  display: flex;
+  flex-basis: 100%;
+  background-color: #000000;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+
+}
+
+.mentions {
+  color: white;
+  font-size: 14px;
+}
+
+footer p {
+  font-size: 20px;
+}
+footer h3 {
+  color: #807c7c;
+  font-size: 12px;
+
+}
+
+footer div {
+align-items: center;
+justify-content: center;
+}
+
+.news-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: rgba(214, 213, 209, 0.15);
+  padding-bottom: 10px;
+  
+}
+
+.news-text {
+  font-size: 11px;
+  color: #807c7c;
+  margin: 10px 0 0 20px;
+}
+
+input {
+  width: 250px;
+  margin-left: 20px;
+}
