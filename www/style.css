@@ -27,6 +27,7 @@ list-style-type: none;
 
 .top-content {
   justify-content: flex-end;
+  margin: 0;
 
 }
 
@@ -58,6 +59,7 @@ a {
   align-items: center;
   margin: 0px;
   background-color: #ffffff;
+  padding-bottom: 18px;
   
 }
 
@@ -72,8 +74,9 @@ a {
 .container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;  
+ 
 }
+
 .container-column {
   display: flex;
   flex-direction: column;
@@ -83,14 +86,9 @@ header {
   clear: both;
 }
 
-
-
-
 .slider {
   display: block;
   overflow: hidden;
-  height: 580px;
-  width: 1400px;
 }
 
 .slider-content {
@@ -219,35 +217,89 @@ span a {
   justify-content: space-around;
 }
 
-section a {
-  display: block;
+.tabs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-top: 20px;
+  padding: 0 20px;
+  justify-content: space-around;
+}
+.tabs input {
+  display: none;
+}
+.tabs label {
+  display: inline-block;
   height: 25px;
+  width: 180px;
+  padding-top: 5px;
   background-color: #ffffff;
   border: 2px solid #fc0606;
   border-radius: 30px;
-  width: 180px;
   text-align: center;
+  color: red;
+  margin: 20px;
 }
-section a:hover {
-  display: block;
+.tabs label:hover {
+  display: inline-block;
   height: 25px;
+  padding-top: 5px;
   background-color: #ff0000;
   border: 2px solid #fc0606;
   border-radius: 30px;
   width: 180px;
   text-align: center;
-  color: #ffffff
+  color: #ffffff;
 }
-.bulle {
-overflow: hidden;
--webkit-border-radius: 100px;
--moz-border-radius: 100px;
-border-radius: 100px;
-border-style: solid;
-border-width: 3px;
-border-color: red;
-width: 200px;
+.tabs input:checked + label {
+  display: inline-block;
+  height: 25px;
+  padding-top: 5px;
+  background-color: #ff0000;
+  border: 2px solid #fc0606;
+  border-radius: 30px;
+  width: 180px;
+  text-align: center;
+  color: #ffffff;
 }
+.tabs #tab1:checked ~ .content #content1,
+.tabs #tab2:checked ~ .content #content2,
+.tabs #tab3:checked ~ .content #content3,
+.tabs #tab4:checked ~ .content #content4,
+.tabs #tab5:checked ~ .content #content5 {
+  display: block;
+  background-color: rgba(222, 222, 230, 0.25);
+  border-radius: 50px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+.tabs .content > div {
+  display: none;
+  padding-top: 20px;
+  text-align: left;
+  /*height: 192px;*/
+  overflow: auto;
+  transition: all ease-out 0.2s 0.1s;
+}
+
+.gamesbanner {
+  padding: 0;
+}
+
+.gamesbanner img {
+  overflow: hidden;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: red;
+  width: 200px;
+  justify-content: space-between;
+
+}
+
 
 
 article {
@@ -329,4 +381,7 @@ justify-content: center;
 input {
   width: 250px;
   margin-left: 20px;
+}
+.new-container {
+  flex-wrap: wrap;
 }
