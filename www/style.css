@@ -4,6 +4,12 @@
   
 }
 
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body, header {
   font-family: "Play", sans-serif;
   font-style: normal;
@@ -72,7 +78,6 @@ a {
 .container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;  
 }
 .container-column {
   display: flex;
@@ -219,16 +224,55 @@ span a {
   justify-content: space-around;
 }
 
-section a {
+.tabs {
+  position: relative;   
+  min-height: 200px; /* This part sucks */
+  clear: both;
+  margin: 25px 0;
+}
+.tab {
+  float: left;
+}
+.tab label {
   display: block;
   height: 25px;
+  width: 180px;
   background-color: #ffffff;
   border: 2px solid #fc0606;
   border-radius: 30px;
-  width: 180px;
   text-align: center;
+  color: red;
+  margin: 20px;
+  justify-content: space-around;
+  z-index: 4; 
 }
-section a:hover {
+.tab [type=radio] {
+  display: none;   
+}
+.content {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  margin: 50px 0 40px 200px;
+}
+
+main {
+  margin-bottom: 50px
+}
+
+[type=radio]:checked ~ label {
+  background: white;
+  border-bottom: 1px solid white;
+  z-index: 2;
+}
+[type=radio]:checked ~ label ~ .content {
+  z-index: 1;
+}
+
+label:hover {
   display: block;
   height: 25px;
   background-color: #ff0000;
@@ -236,8 +280,40 @@ section a:hover {
   border-radius: 30px;
   width: 180px;
   text-align: center;
-  color: #ffffff
+  color: #ffffff;
 }
+
+input:checked {
+  display: block;
+  height: 25px;
+  background-color: #ff0000;
+  border: 2px solid #fc0606;
+  border-radius: 30px;
+  width: 180px;
+  text-align: center;
+  color: #ffffff;
+  
+}
+
+.tab [type=radio] {
+  display: none;   
+}
+
+
+.gamesbanner img {
+  overflow: hidden;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: red;
+  width: 200px;
+  justify-content: space-between;
+
+}
+
+
 .bulle {
 overflow: hidden;
 -webkit-border-radius: 100px;
@@ -275,8 +351,10 @@ article h3 {
 }
 
 .store-items {
+display: none;
 justify-content: space-between; 
 }
+
 body > footer {
   display: flex;
   flex-basis: 100%;
@@ -325,8 +403,4 @@ justify-content: center;
 .news-text span {
   color: red;
   font-size: 16px;
-}
-input {
-  width: 250px;
-  margin-left: 20px;
 }
