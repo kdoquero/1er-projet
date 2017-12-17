@@ -224,79 +224,66 @@ span a {
   justify-content: space-around;
 }
 
-.tabs {
-  position: relative;   
-  min-height: 200px; /* This part sucks */
-  clear: both;
-  margin: 25px 0;
-}
-.tab {
-  float: left;
-}
-.tab label {
-  display: block;
-  height: 25px;
-  width: 180px;
-  background-color: #ffffff;
-  border: 2px solid #fc0606;
-  border-radius: 30px;
-  text-align: center;
-  color: red;
-  margin: 20px;
-  justify-content: space-around;
-  z-index: 4; 
-}
-.tab [type=radio] {
-  display: none;   
-}
-.content {
-  position: absolute;
-  top: 28px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 20px;
-  margin: 50px 0 40px 200px;
-}
-
 main {
-  margin-bottom: 50px
-}
-
-[type=radio]:checked ~ label {
-  background: white;
-  border-bottom: 1px solid white;
-  z-index: 2;
-}
-[type=radio]:checked ~ label ~ .content {
-  z-index: 1;
-}
-
-label:hover {
   display: block;
-  height: 25px;
-  background-color: #ff0000;
-  border: 2px solid #fc0606;
-  border-radius: 30px;
-  width: 180px;
-  text-align: center;
-  color: #ffffff;
+  min-height: 300px;
 }
 
-input:checked {
+.tabs{
+  width: 1400px;
   display: block;
-  height: 25px;
-  background-color: #ff0000;
-  border: 2px solid #fc0606;
-  border-radius: 30px;
-  width: 180px;
-  text-align: center;
-  color: #ffffff;
+  margin: 40px auto;
+  position: relative;
+}
+
+.tabs .tab{
+  float: left;
+  display: block;
+}
+
+.tabs .tab>input[type="radio"] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.tabs .tab>label {
+  display: block;
+  padding: 6px 21px;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  color: #FFF;
+  background: #4A83FD;
+}
+
+.tabs .content {
+  z-index: 0;/* or display: none; */
+  overflow: hidden;
+  width: 600px;
+  padding: 25px;
+  position: absolute;
+  top: 27px;
+  left: 0;
+  background: #303030;
+  color: #DFDFDF;
   
+  opacity:0;
+  transition: opacity 400ms ease-out;
 }
 
-.tab [type=radio] {
-  display: none;   
+.tabs>.tab>[id^="tab"]:checked + label {
+  top: 0;
+  background: #303030;
+  color: #F5F5F5;
+}
+
+.tabs>.tab>[id^="tab"]:checked ~ [id^="tab-content"] {
+  z-index: 1;/* or display: block; */
+ 
+  opacity: 1;
+  transition: opacity 400ms ease-out;
 }
 
 
