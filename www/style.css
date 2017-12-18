@@ -86,132 +86,160 @@ header {
   clear: both;
 }
 
-.slider {
-  display: block;
-  overflow: hidden;
-}
-
-.slider-content {
-  justify-content: center;
-}
-
-.slider figure div {
-  width: 20%;
-float: left;
-}
-
-.slider figure img {
-  width: 100%;
-  float: left;
-  z-index: 1;
-}
-
-.slider figure {
-  position: relative;
-  width:  500%;
-  margin: 0;
-  left: 0;
-  animation: 25s slidy infinite
-}
-
-.img1 {
-  position: absolute;
-  bottom:200px;
-  left:160px;
+.carousel-wrapper{
   display: flex;
-  flex-direction: row;
-
-}  
-
-span a {
-  color: white;
+  justify-content: center;
+  height:580px;
+  position:relative;
+  margin:0 auto;
 }
 
-@keyframes slidy {
-  
-    0% {
-      left: 0;
-    }
-  
-    16% {
-      left: 0;
-    }
-  
-    26% {
-       left: -100%;
-    }
-  
-    36% {
-      left: -100%;
-    }
-  
-    46% {
-      left:-200%;
-    }
+.carousel-item{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:25px 50px;
+  opacity:0;
+  transition: all 0.5s ease-in-out;
+}
+.arrow{
+  position:absolute;
+  top:0;
+  display:block;
+  width:50px;
+  height:100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  background: url("http://dancort.es/assets/img/css-carousel/carousel-arrow-dark.png") 50% 50% / 20px no-repeat;
+}
 
-    56% {
-      left:-200%;
-    }
-
-    66% {
-      left: -300%
-    }
-
-    78% {
-      left: -300%
-    }
-  
-    100% {
-      left: 0%;
-    }
+.arrow-prev{
+  left:0;
+}
+ 
+.arrow-next{
+    right:0;
+    -webkit-transform: rotate(180deg);
+     transform: rotate(180deg);
   }
 
-.bottom-slider {
-  max-width: 1200px;
-  position: relative;
-  margin: 0px;
-  background-color: #cfd4f3
+.light{
+  color:white;
 }
 
-.bottom-left-pos {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  z-index: 2;
-  bottom: 170px;
-  left: 140px;
-
-
+@media (max-width: 480px) {
+      .arrow, .light .arrow {
+        background-size: 10px;
+        background-position: 10px 50%;
+      }
+    }
 }
 
-.bottom-left {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 40px;
+/*Select every element*/
+[id^="item"] {
+    display: none;
+  }
+
+.item-1 {
+    z-index: 2;
+    opacity: 1;
+  background:url("images/zwei2-rotatingbanner-1600x580.png");
+  background-size:cover;
+  }
+.item-2{
+  background:url("images/skpbs-website-2-1600x580.png");
+   background-size:cover;
+}
+.item-3{
+  background:url("images/ys7-rotatingbanner-test-1600x580.png");
+   background-size:cover;
+}
+.item-4{
+  background:url("images/tocsPC-banner1-1600x580.png");
+   background-size:cover;
+}
+
+*:target ~ .item-1 {
+    opacity: 0;
+  }
+
+#item-1:target ~ .item-1 {
+    opacity: 1;
+  }
+
+#item-2:target ~ .item-2, #item-3:target ~ .item-3, #item-4:target ~ .item-4 {
+    z-index: 3;
+    opacity: 1;
+  }
+
+.bottom-left1 {
+  bottom: 80px;
+  left: 180px;
+  display: inline-block;
+  height: 25px;
+  padding-top: 5px;
   background-color: #ff0000;
   border: 2px solid #fc0606;
-  justify-content: center;
   border-radius: 30px;
-  width: 130px;
-  color:white;
-  z-index: 3;
-}
-}
-.bottom-left2 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 40px;
-  background-color: #ff0000;
-  border: 2px solid #fc0606;
-  border-radius: 30px;
-  width: 140px;
-  justify-content: center;
-  color:white;
-  z-index: 3;
+  width: 180px;
+  text-align: center;
+  color: #ffffff;
+  padding-bottom: 5px;
 
 }
+
+/*
+.item-1, .item-2, .item-3, .item-4 {
+  width: 20%;
+  float: left;
+  animation: 25s slidy infinite;
+}
+
+figure {
+    position: relative;
+    width:  500%;
+  }
+
+  @keyframes slidy {
+    
+      0% {
+        left: 0;
+      }
+    
+      16% {
+        left: 0;
+      }
+    
+      26% {
+         left: -100%;
+      }
+    
+      36% {
+        left: -100%;
+      }
+    
+      46% {
+        left:-200%;
+      }
+  
+      56% {
+        left:-200%;
+      }
+  
+      66% {
+        left: -300%
+      }
+  
+      78% {
+        left: -300%
+      }
+    
+      100% {
+        left: 0%;
+      }
+    }
+*/
 
 .platform {
   justify-content: space-around;
