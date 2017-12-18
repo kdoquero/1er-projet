@@ -66,6 +66,14 @@ a {
   
 }
 
+.headerwrap li>a:hover {
+  text-align: center;
+  height: 70px;
+  background-color: red;
+  color: #ffffff;
+
+}
+
 .logohead {
   display: flex;
   justify-content: flex-start;
@@ -103,7 +111,6 @@ header {
   bottom:0;
   left:0;
   right:0;
-  padding:25px 50px;
   opacity:0;
   transition: all 0.5s ease-in-out;
 }
@@ -141,12 +148,12 @@ header {
 
 /*Select every element*/
 [id^="item"] {
-    display: none;
+  display: none;
   }
 
 .item-1 {
-    z-index: 2;
-    opacity: 1;
+  z-index: 2;
+  opacity: 1;
   background:url("images/zwei2-rotatingbanner-1600x580.png");
   background-size:cover;
   animation: fade 50s infinite;
@@ -167,20 +174,6 @@ header {
   animation: fade4 50s infinite;
 }
 
-/*.item-1:hover {
-  animation-play-state: paused;
-}
-
-.item-2:hover {
-  animation-play-state: paused;
-}
-.item-3:hover {
-  animation-play-state: paused;
-}
-.item-4:hover {
-  animation-play-state: paused;
-}
-*/
 
 *:target ~ .item-1 {
     opacity: 0;
@@ -225,9 +218,11 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
 }
 
-/*@keyframes fade
+/* ----animation fade-----
+@keyframes fade
 {
   0%   {opacity:1}
   33.333% { opacity: 0}
@@ -446,4 +441,13 @@ input {
 }
 .new-container {
   flex-wrap: wrap;
+}
+
+#fixedbutton {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  height: 50px;
+  width: 50px;
+  z-index: 5;
 }
