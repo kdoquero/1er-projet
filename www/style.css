@@ -149,19 +149,38 @@ header {
     opacity: 1;
   background:url("images/zwei2-rotatingbanner-1600x580.png");
   background-size:cover;
+  animation: fade 50s infinite;
   }
 .item-2{
   background:url("images/skpbs-website-2-1600x580.png");
-   background-size:cover;
+  background-size:cover;
+  animation: fade2 50s infinite;
 }
 .item-3{
   background:url("images/ys7-rotatingbanner-test-1600x580.png");
-   background-size:cover;
+  background-size:cover;
+  animation: fade3 50s infinite;
 }
 .item-4{
   background:url("images/tocsPC-banner1-1600x580.png");
-   background-size:cover;
+  background-size:cover;
+  animation: fade4 50s infinite;
 }
+
+/*.item-1:hover {
+  animation-play-state: paused;
+}
+
+.item-2:hover {
+  animation-play-state: paused;
+}
+.item-3:hover {
+  animation-play-state: paused;
+}
+.item-4:hover {
+  animation-play-state: paused;
+}
+*/
 
 *:target ~ .item-1 {
     opacity: 0;
@@ -208,7 +227,41 @@ header {
   justify-content: space-between;
 }
 
-/*
+/*@keyframes fade
+{
+  0%   {opacity:1}
+  33.333% { opacity: 0}
+  66.666% { opacity: 0}
+  100% { opacity: 1}
+}
+@keyframes fade2
+{
+  0%   {opacity:0}
+  33.333% { opacity: 1}
+  66.666% { opacity: 0 }
+  100% { opacity: 0}
+}
+@keyframes fade3
+{
+  0%   {opacity:0}
+  33.333% { opacity: 0}
+  66.666% { opacity: 1}
+  100% { opacity: 0}
+}
+
+@keyframes fade4
+{
+  0%   {opacity:0}
+  33.333% { opacity: 0}
+  66.666% { opacity: 1}
+  100% { opacity: 0}
+}
+
+figure:hover { 
+  animation-play-state:paused;
+}
+
+/* --tentative animation--
 .item-1, .item-2, .item-3, .item-4 {
   width: 20%;
   float: left;
@@ -219,46 +272,8 @@ figure {
     position: relative;
     width:  500%;
   }
-
-  @keyframes slidy {
-    
-      0% {
-        left: 0;
-      }
-    
-      16% {
-        left: 0;
-      }
-    
-      26% {
-         left: -100%;
-      }
-    
-      36% {
-        left: -100%;
-      }
-    
-      46% {
-        left:-200%;
-      }
-  
-      56% {
-        left:-200%;
-      }
-  
-      66% {
-        left: -300%
-      }
-  
-      78% {
-        left: -300%
-      }
-    
-      100% {
-        left: 0%;
-      }
-    }
 */
+
 
 .platform {
   justify-content: space-around;
