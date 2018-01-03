@@ -71,6 +71,7 @@ a {
 .headerwrap {
   display: flex;
   justify-content: center;
+  min-height: 100px;
   flex-wrap: wrap;
   align-items: center;
   margin: 0px;
@@ -141,11 +142,11 @@ a {
 }
 
 @media (max-width: 480px) {
-      .arrow, .light .arrow {
-        background-size: 10px;
-        background-position: 10px 50%;
-      }
+  .arrow, .light .arrow {
+    background-size: 10px;
+    background-position: 10px 50%;
     }
+  }
 
 
 /*Select tous les element*/
@@ -159,22 +160,22 @@ a {
   opacity: 1;
   background:url("images/zwei2-rotatingbanner-1600x580.png");
   background-size:cover;
-  animation: fade 50s infinite;
+  /*animation: fade 50s infinite; */
   }
-.item-2{
+.item-2 {
   background:url("images/skpbs-website-2-1600x580.png");
   background-size:cover;
-  animation: fade2 50s infinite;
+  /*animation: fade 50s infinite; */
 }
-.item-3{
+.item-3 {
   background:url("images/ys7-rotatingbanner-test-1600x580.png");
   background-size:cover;
-  animation: fade3 50s infinite;
+  /*animation: fade 50s infinite; */
 }
-.item-4{
+.item-4 {
   background:url("images/tocsPC-banner1-1600x580.png");
   background-size:cover;
-  animation: fade4 50s infinite;
+  /*animation: fade 50s infinite; */
 }
 
 /* template pour rajouter des images au slider X, incrementer nombre
@@ -214,7 +215,6 @@ a {
   text-align: center;
   color: #ffffff;
   padding-bottom: 5px;
-
 }
 
 /* Ajustement taille logo dans l'image slider*/
@@ -285,13 +285,11 @@ figure {
 
 /* Positionnement tabs Flex*/
 .tabs {
-  display: flex;
+  display: block;
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 100%;
   margin-top: 20px;
-  padding: 0 20px;
-  justify-content: space-around;
 }
 
 .tabs input {
@@ -311,6 +309,7 @@ figure {
   text-align: center;
   color: red;
   margin: 20px;
+  
 }
 .tabs label:hover {
   display: inline-block;
@@ -338,8 +337,10 @@ figure {
 .tabs #tab2:checked ~ .content #content2,
 .tabs #tab3:checked ~ .content #content3,
 .tabs #tab4:checked ~ .content #content4,
-.tabs #tab5:checked ~ .content #content5 {
-  display: block;
+.tabs #tab5:checked ~ .content #content5  {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   background-color: rgba(222, 222, 230, 0.25);
   border-radius: 50px;
   margin-bottom: 30px;
@@ -368,7 +369,7 @@ figure {
   border-width: 3px;
   border-color: red;
   width: 200px;
-  justify-content: space-between;
+  justify-content: space-around;
 
 }
 
@@ -388,7 +389,7 @@ article {
 
 /* Stylisation article de font */
 article h5 {
-  color: #575757;
+  color: #575757;               /*date*/
   margin: 10px 0 0 10px;
 }
 
