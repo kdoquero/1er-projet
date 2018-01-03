@@ -313,7 +313,7 @@ figure {
 }
 
 .first {
-margin-left: 200px;
+  margin-left: 10vw;
 }
 .tabs label:hover {
   display: inline-block;
