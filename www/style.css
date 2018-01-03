@@ -312,9 +312,7 @@ figure {
 
 }
 
-.first {
-  margin-left: 10vw;
-}
+
 .tabs label:hover {
   display: inline-block;
   height: 25px;
@@ -336,7 +334,6 @@ figure {
   width: 180px;
   text-align: center;
   color: #ffffff;
-  margin-left: 10vw;
 }
 .tabs #tab1:checked ~ .content #content1,
 .tabs #tab2:checked ~ .content #content2,
